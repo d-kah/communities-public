@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply h-full;
+  font-family: "arial", "sans-serif";
+}
+
+a,
+.link-underline {
+  @apply cursor-pointer hover:underline hover:underline-offset-2;
+}
+
+a.disabled {
+  @apply cursor-not-allowed opacity-50 hover:no-underline;
+}
+
+svg {
+  display: inline-block;
+}
+
+@layer components {
+  .hero {
+    @apply w-full text-[#333];
+  }
+}
+
+.title {
+  @apply m-0 w-full pt-20;
+  font-size: 48px;
+}
+
+.title,
+.description {
+  @apply text-center;
+}
+
+#__next {
+  @apply h-full flex flex-col;
+  padding-top: 64px;
+}
+
+button {
+  @apply disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:no-underline;
+}
+
+.map-leaflet {
+  @apply h-full z-30;
+}
+
+.venn-diagram ul > li:not(:last-child) {
+  @apply border-slate-500 border-b border-solid mix-blend-multiply;
+}
+
+.preFormat {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
